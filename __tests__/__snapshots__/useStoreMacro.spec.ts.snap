@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useStoreMacro generate actual shallow store implementation: generate actual shallow store implementation 1`] = `
+
+import useStoreMacro from "../src/index.macro";
+
+const {
+  count,
+  decrementCount,
+  incrementCount,
+} = useStoreMacro();
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { useShallowStore as _useShallowStore } from "hooks";
+
+const { count, decrementCount, incrementCount } = _useShallowStore((s) => ({
+  count: s.count,
+  decrementCount: s.decrementCount,
+  incrementCount: s.incrementCount,
+}));
+
+
+`;
+
+exports[`useStoreMacro should fail if not a function call: should fail if not a function call 1`] = `
+
+import useStoreMacro from "../src/index.macro";
+
+const {
+  count,
+  decrementCount,
+  incrementCount,
+} = useStoreMacro;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+MacroError: /Users/serkan/repos/zustand-macro/__tests__/useStoreMacro.spec.ts: useStoreMacro only supports function calls.
+
+`;

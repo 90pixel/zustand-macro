@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "esnext"],
+    "types": ["node", "jest"],
+    "baseUrl": "./",
+    "allowJs": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "outDir": "./build",
+  },
+  "include": ["**/*.ts"],
+  "exclude": [
+    "__tests__",
+    "build",
+    "node_modules"
+  ]
+}
