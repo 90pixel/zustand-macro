@@ -1,5 +1,5 @@
 import { addNamed as addImportDeclaration } from "@babel/helper-module-imports";
-import { MacroError, MacroHandler, MacroParams } from "babel-plugin-macros";
+import { MacroError, MacroHandler } from "babel-plugin-macros";
 
 type MacroConfig = {
   importName: string,
@@ -21,18 +21,25 @@ const useStoreMacro: MacroHandler = ({ references, state, babel, config }) => {
     if (functionCallPath?.type !== "CallExpression")
       throw new MacroError("useStoreMacro only supports function calls.")
 
-    addImportDeclaration(referencePath, macroConfig.importName, macroConfig.importSource, {
-      nameHint: `_${macroConfig.importName}`
-    });
+    addImportDeclaration(
+      referencePath,
+      macroConfig.importName,
+      macroConfig.importSource,
+      {
+        nameHint: `_${macroConfig.importName}`
+      });
 
     const idPath = functionCallPath.parentPath?.get("id");
 
     if (!t.isObjectPattern(idPath))
       throw new MacroError("useStoreMacro only supports object destructuring.");
 
-    const deconstructedProps = (idPath as any).node.properties.map((x: any) => x.value.name);
+    const deconstructedProps = (idPath as any).node
+      .properties
+      .map((x: any) => x.value.name);
 
-    const useStoreParameters = deconstructedProps?.map((x: any) => `${x}: s.${x}`)
+    const useStoreParameters = deconstructedProps
+      .map((x: any) => `${x}: s.${x}`)
       .join(",");
 
     const useShallowStoreNode = babel.template.expression.ast(`
