@@ -36,7 +36,7 @@ const useStoreMacro: MacroHandler = ({ references, state, babel, config }) => {
 
     const deconstructedProps = (idPath as any).node
       .properties
-      .map((x: any) => x.value.name);
+      .map((x: any) => x.key.name);
 
     const useStoreParameters = deconstructedProps
       .map((x: any) => `${x}: s.${x}`)
