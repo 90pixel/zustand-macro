@@ -1,3 +1,2 @@
-export declare type UseStoreMacroType = () => void;
-declare const useStoreMacro: UseStoreMacroType;
+declare const useStoreMacro: ReturnType<typeof Object>;
 export default useStoreMacro;
