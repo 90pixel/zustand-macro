@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "author": "Serkan Bircan <serkanbircan21@yandex.com> (https://github.com/fasetto)",
   "main": "build/index.macro.js",
-  "types": "build/index.d.ts",
+  "types": "build/index.macro.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest",
