@@ -31,5 +31,17 @@ pluginTester({
       error: "useStoreMacro only supports function calls.",
       snapshot: true,
     },
+    "should support object destructuring assignment": {
+      code: `
+        import useStoreMacro from "../src/index.macro";
+
+        const {
+          count,
+          decrementCount: decrement,
+          incrementCount: increment,
+        } = useStoreMacro();
+      `,
+      snapshot: true,
+    },
   }
 })

@@ -38,3 +38,30 @@ const {
 MacroError: /Users/serkan/repos/zustand-macro/__tests__/useStoreMacro.spec.ts: useStoreMacro only supports function calls.
 
 `;
+
+exports[`useStoreMacro should support object destructuring assignment: should support object destructuring assignment 1`] = `
+
+import useStoreMacro from "../src/index.macro";
+
+const {
+  count,
+  decrementCount: decrement,
+  incrementCount: increment,
+} = useStoreMacro();
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { useShallowStore as _useShallowStore } from "hooks";
+
+const {
+  count,
+  decrementCount: decrement,
+  incrementCount: increment,
+} = _useShallowStore((s) => ({
+  count: s.count,
+  decrementCount: s.decrementCount,
+  incrementCount: s.incrementCount,
+}));
+
+
+`;
