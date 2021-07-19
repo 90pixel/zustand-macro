@@ -13,10 +13,10 @@ insert_final_newline = true
 tab_width = 2
 indent_size = 2
 
-[*.*rc]
+[*.{json,yml}]
 tab_width = 2
 indent_size = 2
 
-[*.json]
+[*.*rc]
 tab_width = 2
 indent_size = 2
