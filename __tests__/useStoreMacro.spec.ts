@@ -29,7 +29,6 @@ pluginTester({
         } = useStoreMacro;
       `,
       error: "useStoreMacro only supports function calls.",
-      snapshot: true,
     },
     "should support object destructuring assignment": {
       code: `
