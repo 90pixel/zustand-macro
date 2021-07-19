@@ -23,22 +23,6 @@ const { count, decrementCount, incrementCount } = _useShallowStore((s) => ({
 
 `;
 
-exports[`useStoreMacro should fail if not a function call: should fail if not a function call 1`] = `
-
-import useStoreMacro from "../src/index.macro";
-
-const {
-  count,
-  decrementCount,
-  incrementCount,
-} = useStoreMacro;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-MacroError: /Users/serkan/repos/zustand-macro/__tests__/useStoreMacro.spec.ts: useStoreMacro only supports function calls.
-
-`;
-
 exports[`useStoreMacro should support object destructuring assignment: should support object destructuring assignment 1`] = `
 
 import useStoreMacro from "../src/index.macro";
