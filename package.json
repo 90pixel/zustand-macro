@@ -1,6 +1,6 @@
 {
   "name": "@fasetto/zustand.macro",
-  "version": "1.0.3",
+  "version": "1.1.3",
   "author": "Serkan Bircan <serkanbircan21@yandex.com> (https://github.com/fasetto)",
   "homepage": "https://github.com/90pixel/zustand-macro",
   "bugs": {
@@ -12,6 +12,11 @@
   "files": [
     "src/**",
     "build/**"
+  ],
+  "keywords": [
+    "babel-macro",
+    "babel-plugin-macros",
+    "zustand"
   ],
   "scripts": {
     "build": "tsc",
