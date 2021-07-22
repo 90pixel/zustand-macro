@@ -13,6 +13,11 @@
     "src/**",
     "build/**"
   ],
+  "keywords": [
+    "babel-macro",
+    "babel-plugin-macros",
+    "zustand"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "jest",
