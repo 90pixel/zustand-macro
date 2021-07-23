@@ -14,7 +14,7 @@
 
 This package is designed to improve the **Developer Experience (DX)** when working with `zustand` to manage the state in React applications.
 
-### Table of Contents
+## Table of Contents
 
 -   [The Problem](#the-problem)
     -   [What if we need more then one prop?](#what-if-we-need-more-than-one-prop)
@@ -26,7 +26,7 @@ This package is designed to improve the **Developer Experience (DX)** when worki
 
 <br />
 
-### The Problem
+## The Problem
 
 Lets say we have a store like this;
 
@@ -60,7 +60,7 @@ export default function CounterA() {
 }
 ```
 
-#### What if we need more than one prop?
+### What if we need more than one prop?
 
 Now we need to use the store with shallow equality function.
 
@@ -82,7 +82,7 @@ export default function CounterA() {
 
 We are repeating a lot.
 
-### Solution
+## Solution
 
 Using `babel-plugin-macros` we can turn this code into this below, at `compile-time`.
 
@@ -111,7 +111,7 @@ const {
 }));
 ```
 
-### Installation
+## Installation
 
 Installation of the dependencies.
 
@@ -125,7 +125,7 @@ or using yarn
 yarn add -D @fasetto/zustand.macro babel-plugin-macros
 ```
 
-#### Updating Your Babel config
+### Updating Your Babel config
 
 You must add the `babel-plugin-macros` plugin into your babel plugin list.
 
@@ -141,7 +141,7 @@ You must add the `babel-plugin-macros` plugin into your babel plugin list.
 }
 ```
 
-#### Adding useShallowStore hook
+### Adding useShallowStore hook
 
 Add this hook into your custom hooks.
 
@@ -155,7 +155,7 @@ export default function useShallowStore(selector, equalityFn = shallow) {
 }
 ```
 
-#### Configuration
+### Configuration
 
 By default when you import the macro, the import statement will be deleted at compile-time.
 
@@ -187,4 +187,4 @@ You can change these in your `package.json` file.
 ```
 
 
-##### You are ready to go now.
+**You are ready to go now.**
