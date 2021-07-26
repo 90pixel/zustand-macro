@@ -1,13 +1,13 @@
 <div align="center">
 <h1>zustand.macro</h1>
 <img alt="babel-macro" src="https://img.shields.io/badge/-babel--macro-blueviolet" />
-<a href="https://www.npmjs.com/package/@fasetto/zustand.macro">
-<img alt="npm" src="https://img.shields.io/npm/v/@fasetto/zustand.macro?label=%40fasetto%2Fzustand.macro" />
+<a href="https://www.npmjs.com/package/@90pixel/zustand.macro">
+<img alt="npm" src="https://img.shields.io/npm/v/@90pixel/zustand.macro?label=%4090pixel%2Fzustand.macro" />
 </a>
-<a href="https://www.npmjs.com/package/@fasetto/zustand.macro">
-<img alt="npm" src="https://img.shields.io/npm/dm/@fasetto/zustand.macro" />
+<a href="https://www.npmjs.com/package/@90pixel/zustand.macro">
+<img alt="npm" src="https://img.shields.io/npm/dm/@90pixel/zustand.macro" />
 </a>
-<img alt="NPM" src="https://img.shields.io/npm/l/@fasetto/zustand.macro" />
+<img alt="NPM" src="https://img.shields.io/npm/l/@90pixel/zustand.macro" />
 </div>
 
 ## Getting Started
@@ -87,7 +87,7 @@ We are repeating a lot.
 Using `babel-plugin-macros` we can turn this code into this below, at `compile-time`.
 
 ```js
-import useStoreMacro from "@fasetto/zustand.macro";
+import useStoreMacro from "@90pixel/zustand.macro";
 
 const {
   count,
@@ -116,13 +116,13 @@ const {
 Installation of the dependencies.
 
 ```term
-npm install --save-dev @fasetto/zustand.macro babel-plugin-macros
+npm install --save-dev @90pixel/zustand.macro babel-plugin-macros
 ```
 
 or using yarn
 
 ```term
-yarn add -D @fasetto/zustand.macro babel-plugin-macros
+yarn add -D @90pixel/zustand.macro babel-plugin-macros
 ```
 
 ### Updating Your Babel config
@@ -162,7 +162,7 @@ By default when you import the macro, the import statement will be deleted at co
 Shallow store implementation will be added instead.
 
 ```js
-import useStoreMacro from "@fasetto/zustand.macro";
+import useStoreMacro from "@90pixel/zustand.macro";
       ↓ ↓ ↓ ↓ ↓ ↓
 import { useShallowStore as _useShallowStore } from "hooks";
 ```
